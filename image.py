@@ -40,6 +40,21 @@ plt.imshow(img_one_pil)
 plt.title('Image1 pil')
 plt.axis('off')
 
+#color space conversion
+
+img_2_cv = cv.imread(r'dataset/images/b.jpg')
+img_2_cv_RGB = cv.cvtColor(img_2_cv,cv.COLOR_RGB2BGR)
+plt.imshow(img_2_cv_RGB)
+
+
 #Gray
-img_two_cv_gray = cv.imread(r'dataset/images/b.jpg',1)
-print(img_two_cv_gray)
+img_two_cv_gray = cv.imread(r'dataset/images/b.jpg',0)
+plt.imshow(img_two_cv_gray)
+print('shape of gray image',img_two_cv_gray.shape)
+
+
+#color to Gray 
+img_two_cv = cv.imread(r'dataset/images/b.jpg')
+img_2_cv_gray = cv.cvtColor(img_two_cv,cv.COLOR_RGB2GRAY)
+cv.imshow('image cv 2 gray',img_2_cv_gray)
+cv.waitKey(0)
