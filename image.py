@@ -40,4 +40,6 @@ plt.imshow(img_one_pil)
 plt.title('Image1 pil')
 plt.axis('off')
 
-
+#Gray
+img_two_cv_gray = cv.imread(r'dataset/images/b.jpg',1)
+print(img_two_cv_gray)
